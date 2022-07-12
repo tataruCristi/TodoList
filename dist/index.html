@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/569a88e308.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header class="header">
+      <i class="fa-solid fa-list-check fa-2xl"></i>
+      <h1>Todo List</h1>
+    </header>
+    <section class="main">
+      <div class="navigation-bar">
+        <div class="navigation-bar__inbox" id="allTasks">
+          <i class="fa-solid fa-inbox"></i>
+          <h2>All tasks</h2>
+        </div>
+        <div class="navigation-bar__today">
+          <i class="fa-solid fa-calendar-day"></i>
+          <h2>Today</h2>
+        </div>
+        <div class="navigation-bar__week">
+          <i class="fa-solid fa-calendar-week"></i>
+          <h2>This week</h2>
+        </div>
+      </div>
+      <div class="display">
+        <div class="display__title">
+          <h2 id="display_title">All tasks</h2>
+        </div>
+        <div class="display__elements"></div>
+        <div class="display__form">
+          <div class="modal-background hide-modal" id="modal">
+            <div class="modal-container">
+              <button id="closeModal">X</button>
+              <form>
+                <input
+                  type="text"
+                  name="item"
+                  id="item"
+                  placeholder="enter task"
+                />
+                <fieldset>
+                  <legend>Enter due date</legend>
+                  <input type="date" id="date" name="date" />
+                </fieldset>
+                <fieldset>
+                  <legend>Choose the priority:</legend>
+                  <input type="radio" id="low" name="priority" value="low" />
+                  <label for="low">Low</label>
+                  <input
+                    type="radio"
+                    id="medium"
+                    name="priority"
+                    value="medium"
+                    checked
+                  />
+                  <label for="medium">Medium</label>
+                  <input type="radio" id="high" name="priority" value="high" />
+                  <label for="high">High</label>
+                </fieldset>
+                <button type="button" class="addTask-btn" id="addElement">
+                  Add Item
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <button class="display__form--btn" id="openModal">
+            <i class="fa-solid fa-plus"></i>Add Task
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="social">
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <p class="copyright">Tataru Cristi @2022</p>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
